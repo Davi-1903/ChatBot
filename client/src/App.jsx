@@ -1,7 +1,13 @@
+import Chat from './components/Chat/Chat';
+import Entry from './components/Entry/Entry';
+
 export default function App() {
     return (
-        <>
-            <h1>Hello World!</h1>
-        </>
+        <div className='wrapper'>
+            <main>
+                <Chat />
+                <Entry />
+            </main>
+        </div>
     );
 }

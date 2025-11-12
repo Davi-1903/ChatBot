@@ -1,8 +1,28 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+:root {
+    --base-color: #121212;
+    --font-color: #FFFFFF;
+    --font: 'Chivo Mono', monospace;
+}
+
+.wrapper {
+    background-color: var(--base-color);
+}
+
+main {
+    position: relative;
+    min-height: 100vh;
+    width: min(60rem, 100%);
+    margin-inline: auto;
+    background-color: orange;
 }
