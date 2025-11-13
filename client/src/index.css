@@ -24,5 +24,4 @@ main {
     min-height: 100vh;
     width: min(60rem, 100%);
     margin-inline: auto;
-    background-color: orange;
 }

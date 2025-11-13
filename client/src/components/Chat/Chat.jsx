@@ -1,12 +1,13 @@
-export default function Chat() {
+import './Chat.css';
+
+export default function Chat({ messages }) {
     return (
         <div className='chat-container'>
-            <div className="ask">
-                <span>Which color is #ffffff?</span>
-            </div>
-            <div className="answer">
-                <span>#ffffff is white.</span>
-            </div>
+            {messages.map(msg => (
+                <div key={msg.id} className={msg.type}>
+                    <span>{msg.text}</span>
+                </div>
+            ))}
         </div>
     );
 }

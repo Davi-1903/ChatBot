@@ -1,0 +1,22 @@
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.ask {
+    background-color: hsl(from var(--base-color) h s calc(l + 20));
+    align-self: flex-end;
+    max-width: 80%;
+    padding: 1rem;
+    border-radius: 1rem;
+    font: normal 1rem/1.5 var(--font);
+    color: var(--font-color);
+}
+
+.answer {
+    padding-block: 1rem;
+    font: normal 1rem/1.5 var(--font);
+    color: var(--font-color);
+}
