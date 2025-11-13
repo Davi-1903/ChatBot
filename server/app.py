@@ -14,7 +14,7 @@ app.register_blueprint(msg_bp)
 @app.route('/<path:path>')
 def serve_react(path: str = ''):
     if app.static_folder is None:
-        raise RuntimeError('A pasta estática não está configurada corretamente.')
+        raise RuntimeError('Static folder is not set.')
     if path and not path.startswith('/api') and os.path.exists(os.path.join(app.static_folder, path)):
         return app.send_static_file(path)
     return app.send_static_file('index.html')

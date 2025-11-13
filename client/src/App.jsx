@@ -24,12 +24,20 @@ export default function App() {
                 },
                 body: JSON.stringify({ message }),
             });
+
+            if (response.status !== 200) {
+                throw new Error('Non-200 response');
+            }
+
             const data = await response.json();
-            setMessages([...messages, {
-                id: botResponseId,
-                type: 'answer',
-                text: data.text,
-            }]);
+            setMessages(prevMessages => [
+                ...prevMessages,
+                {
+                    id: botResponseId,
+                    type: 'answer',
+                    text: data.text,
+                },
+            ]);
         } catch (error) {
             console.error('Error fetching response:', error);
             alert('Sorry, something went wrong.');

@@ -1,8 +1,8 @@
 .entry-container {
-    position: absolute;
+    position: fixed;
     bottom: 1rem;
-    left: 1rem;
-    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    width: calc(min(60rem, 100%) - 2rem);
 }
 
 .entry-container > #entry {
